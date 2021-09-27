@@ -1,4 +1,4 @@
-# Python Lists
+# Lists
 
 listExample01 = ["Citroen", "Fiat", "Opel"]
 print(listExample01)  # ["Citroen", "fiat", "Opel"]
