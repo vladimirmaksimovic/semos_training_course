@@ -65,4 +65,4 @@ print(tuple_example_03)
 
 tuple_example_03 = tuple_example_02 * 3
 print(tuple_example_03)
-#
+# (1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5)
