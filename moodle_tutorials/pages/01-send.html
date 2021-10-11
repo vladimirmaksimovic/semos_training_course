@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css link -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>HTML/CSS Tutorial</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header id="header-section">
+      <!-- navigation -->
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li>/</li>
+          <li><a href="#">Send</a></li>
+          <li>/</li>
+          <li><a href="02-receive.html">Receive</a></li>
+          <li>/</li>
+          <li><a href="03-css_poistion.html">CSS position</a></li>
+          <li>/</li>
+          <li><a href="04-css_flex.html">CSS flex</a></li>
+        </ul>
+      </nav>
+      <!-- /navigation -->
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- back to top btn -->
+      <a href="#header-section" class="back-to-top-btn">^</a>
+
+      <h1>Send Page</h1>
+      <section>
+        <h3>Send data through form:</h3>
+        <!-- form -->
+        <form action="02-receive.html" method="GET">
+          <div>
+            <label for="FirstName">First Name:</label>
+            <input type="text" name="FirstName" id="FirstName" />
+          </div>
+          <div>
+            <label for="LastName">Last Name:</label>
+            <input type="text" name="LastName" id="LastName" />
+          </div>
+          <div>
+            <label for="Address">Address:</label>
+            <input type="text" name="Address" id="Address" />
+          </div>
+          <div>
+            <label for="Email">Email:</label>
+            <input type="email" name="Email" id="Email" />
+          </div>
+          <div>
+            <label for="Phone">Phone number:</label>
+            <input type="text" name="Phone" id="Phone" />
+          </div>
+          <input type="submit" value="Submit" />
+        </form>
+        <!-- /form -->
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer>Footer</footer>
+  </body>
+</html>

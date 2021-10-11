@@ -1,0 +1,306 @@
+/*** CSS RESET ***/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*** GENERAL STYLES ***/
+
+html {
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+  line-height: 1.8rem;
+  background-color: #e7e7e7;
+
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+/*** HEADER ***/
+
+header,
+footer {
+  width: 100%;
+  min-height: 4rem;
+
+  background-color: #0a3772c9;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul {
+  list-style-type: none;
+
+  display: flex;
+  gap: 1rem;
+}
+
+header a {
+  color: #e7e7e7;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+header a:hover {
+  color: #f3bf5f;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+/*** MAIN ***/
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; */
+}
+
+main section {
+  width: 100%;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+main form {
+  min-width: 20vw;
+  padding: 1rem;
+
+  background-color: #fff;
+  border: 1px solid #f3bf5f;
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form div {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+main label {
+  font-size: 0.75rem;
+  text-align: end;
+}
+
+main input {
+  width: 60%;
+  padding: 0.25rem;
+
+  border: none;
+  border-bottom: 1px solid #f3bf5f;
+  /* border-radius: 3px; */
+}
+
+main input[type="submit"] {
+  width: min-content;
+  margin-left: auto;
+  padding: 0.5rem;
+  background-color: #f3bf5f;
+  border: none;
+  border-radius: 3px;
+}
+
+main input[type="submit"]:hover {
+  background-color: #1087e9;
+  color: #e7e7e7;
+  cursor: pointer;
+}
+
+/*** CSS POSITION ***/
+
+.container {
+  width: 60vw;
+  height: 60vh;
+  margin: 20vh auto;
+  border: 1px solid #000;
+  overflow-y: scroll;
+
+  position: relative;
+}
+
+.container div {
+  width: 7rem;
+  height: 7rem;
+  /* opacity: 0.5; */
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #e7e7e7;
+}
+
+.relative {
+  background-color: #892be2b0;
+  border: 1px dotted #0000ff;
+
+  position: relative;
+  top: 4rem;
+  left: 4rem;
+
+  /* opacity: 0.5; */
+}
+
+.absolute {
+  background-color: #2f85e7b9;
+  border: 1px dotted #ff0062;
+
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+
+  /* opacity: 0.5; */
+}
+
+.fixed-01 {
+  background-color: #2be23acc;
+  border: 1px dotted #cc00ff;
+
+  position: fixed;
+  top: 3rem;
+  right: 2rem;
+}
+
+.fixed-02 {
+  background-color: #2be23acc;
+  border: 1px dotted #cc00ff;
+
+  position: fixed;
+}
+
+.sticky {
+  background-color: #e26e2bc0;
+  border: 1px dotted #0000ff;
+
+  position: sticky;
+
+  top: 5rem;
+  left: 6rem;
+}
+
+/*** CSS FLEX ***/
+
+.flex-container {
+  width: 60vw;
+  height: 60vh;
+  margin: 20vh auto;
+  padding: 2rem;
+  border: 1px solid #000;
+  /* overflow-y: scroll; */
+
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  width: 7rem;
+  height: 7rem;
+  background-color: #da6416;
+  color: whitesmoke;
+  border: 3px dotted #8a2be2;
+}
+
+.item-01 {
+  flex: 1 1 20%;
+}
+
+.item-02 {
+  flex: 1 0 70%;
+}
+
+.item-03 {
+  flex: 1 0 30%;
+}
+
+.item-04 {
+  flex: 1 1 50%;
+  overflow-y: scroll;
+}
+
+/*** SWAPI CARDS ***/
+
+#root {
+  padding: 1rem;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  background-image: url("../img/death-star-planet-star-wars-nt-2560x1700\(1\).jpg");
+  background-attachment: fixed;
+  background-color: #202020;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: #e7e7e7;
+}
+
+.card-container {
+  padding: 1rem;
+  background-color: #1087e917;
+  border-radius: 5px;
+}
+
+#root ul {
+  list-style-type: none;
+}
+
+#root li {
+  padding: 0.5rem 0 0 0;
+  border-bottom: 1px dotted #e7e7e7;
+}
+
+/*** Back to top btn ***/
+
+.back-to-top-btn {
+  padding: 0.2rem 0.75rem;
+
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+
+  text-align: center;
+  color: #e7e7e7;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+
+  background-color: #1087e970;
+  border: 1px solid #1087e970;
+  border-radius: 30px;
+}
+
+.back-to-top-btn:hover {
+  color: #f3bf5f;
+  font-size: 1rem;
+
+  background-color: #1087e9a1;
+  border: 1px solid #f3bf5f;
+}
