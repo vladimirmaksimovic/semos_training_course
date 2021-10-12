@@ -18,6 +18,18 @@ html {
   scroll-behavior: smooth;
 }
 
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 h1,
 h2,
 h3 {
@@ -260,6 +272,18 @@ main input[type="submit"]:hover {
   background-size: cover;
 
   color: #e7e7e7;
+}
+
+@media only screen and (max-width: 996px) {
+  #root {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #root {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card-container {

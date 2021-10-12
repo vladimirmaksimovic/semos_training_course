@@ -1,4 +1,75 @@
+// imports
 import Car from "./Car.js";
+
+/**
+ * create navigation
+ */
+
+// array with link names
+const navLinks = ["Home", "Send", "Recive", "CSS position", "CSS flex"];
+
+// create navigation elements with template literals
+
+/* const nav = `
+  <ul>
+  <li><a href="#">${navLinks[0]}</a></li>
+  <li>/</li>
+  <li><a href="./pages/01-send.html">${navLinks[1]}</a></li>
+  <li>/</li>
+  <li><a href="./pages/02-receive.html">${navLinks[2]}</a></li>
+  <li>/</li>
+  <li><a href="./pages/03-css_poistion.html">${navLinks[3]}</a></li>
+  <li>/</li>
+  <li><a href="./pages/04-css_flex.html">${navLinks[4]}</a></li>
+  </ul>
+`; */
+
+// create navigation with createElement() method
+
+const headerSection = document.querySelector("#header-section");
+const navContainer = document.createElement("nav");
+const ulNav = document.createElement("ul");
+
+headerSection.append(navContainer);
+navContainer.append(ulNav);
+
+/* const navContainer = document.querySelector("#main-nav");
+console.log("Nav container => ", navContainer); */
+//navContainer.innerHTML = nav;
+
+/* navLinks.forEach((link) => {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+
+  a.innerText = link;
+  li.append(a);
+  ulNav.append(li);
+}); */
+
+// create navigation from object
+
+const navObj = {
+  "index.html": "Home",
+  "01-send.html": "Send",
+  "02-receive.html": "Receive",
+  "03-css_poistion.html": "CSS position",
+  "04-css_flex.html": "CSS flex",
+};
+
+for (const key in navObj) {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+
+  a.setAttribute(
+    "href",
+    key === "index.html" ? "index.html" : "./pages/" + key
+  );
+  a.innerText = navObj[key];
+  li.append(a);
+  ulNav.append(li);
+}
+
+// play with objectss
 
 /* const punto = new Car("Fiat", "Punto", 2001, 5, true, true, "automatic");
 const bravo = new Car("Fiat", "Bravo", 2001, 3, true, false, "manual");
