@@ -8,6 +8,8 @@ def main():
 if __name__ == "__main__":
   main()
 
+""" Variables """
+
 # Declare a variable adn initialize it
 
 f = 0
@@ -23,6 +25,8 @@ print(f)
 # print("string " + 123) # error
 
 print("string " + str(123)) # OK
+
+""" Functions """
 
 # Global vs. local variables in functions
 
@@ -67,7 +71,7 @@ def fn4(num, x = 2):
 
 print(fn4(2))
 
-# Conditional statements
+""" Conditionals """
 
 def fn5():
   x, y = 1000, 100
@@ -80,7 +84,7 @@ def fn5():
   else:
     st = "x is greater than y"
 
-# Loops
+""" Loops """
 
 def loopFn():
   x = 0
@@ -109,3 +113,31 @@ def loopFn():
     print (index, day)
 
 loopFn()
+
+""" Classes """
+
+class class1(): # define a class
+  def method1(self): # define first class method with "self" argument
+    print("myClass method1")
+
+  def method2(self, somestring): # define second class method
+    print("myClass method 2" + somestring)
+
+def fn6():
+  # instantiate an object instance inside a f-n
+  c = class1()
+  # call class methods
+  c.method1()
+  c.method2("This is a string")
+
+
+# if __name__ == "__fn6__":
+fn6()
+
+class class2(class1):
+  def method1(self):
+    class1.method1(self)
+    print("another Class method1")
+
+  def method2(self, somestring):
+    print("another Class method 2")
