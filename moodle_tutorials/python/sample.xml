@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<person>
+  <fisrtname>Lion</fisrtname>
+  <lastname>Tamer</lastname>
+  <home>Seattle</home>
+  <skill name="JS"></skill>
+  <skill name="Py"></skill>
+  <skill name="PHP"></skill>
+  <skill name="HTML"></skill>
+</person>
